@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block content %}
+ <div class="container mt-5">
+     <h1 class="display-4 text-center">Signup</h1>
+     <p class="lead text-center">Create your account to join Puppy Rock!</p>
+     <hr class="my-4">
+ 
+     <form action="{{ url_for('thankyou') }}" method="post">
+         <div class="form-group">
+             <label for="username">Username</label>
+             <input type="text" class="form-control" id="username" name="username" required>
+         </div>
+         <div class="form-group">
+             <label for="password">Password</label>
+             <input type="password" class="form-control" id="password" name="password" required>
+         </div>
+         <button type="submit" class="btn btn-primary">Signup</button>
+     </form>
+ </div>
+ {% endblock %}
+ 
